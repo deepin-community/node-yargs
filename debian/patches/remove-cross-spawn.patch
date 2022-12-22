@@ -1,0 +1,16 @@
+Description: drop cross-spawn
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-12-05
+
+--- a/test/integration.js
++++ b/test/integration.js
+@@ -1,7 +1,7 @@
+ 'use strict'
+ /* global describe, it, before, after */
+ 
+-const spawn = require('cross-spawn')
++const spawn = require('child_process').spawn
+ const path = require('path')
+ const which = require('which')
+ const rimraf = require('rimraf')

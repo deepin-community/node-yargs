@@ -1,0 +1,157 @@
+node-yargs (15.3.1+repack-3) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix GitHub tags regex
+  * Fix filenamemangle
+  * Drop dependency to nodejs
+
+ -- Yadd <yadd@debian.org>  Tue, 09 Nov 2021 14:05:35 +0100
+
+node-yargs (15.3.1+repack-2) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.1
+  * Add ctype=nodejs to component(s)
+  * Drop cross-spawn in test (Closes: #976504)
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 05 Dec 2020 18:07:21 +0100
+
+node-yargs (15.3.1+repack-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 13
+  * Use dh-sequence-nodejs
+  * Embed typescript declarations and repack
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 08 Nov 2020 12:56:34 +0100
+
+node-yargs (15.3.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ Xavier Guimard ]
+  * New upstream version 15.3.1
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 03 Jun 2020 09:15:31 +0200
+
+node-yargs (15.3.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 15.3.0
+  * Requires node-yargs-parser ≥ 18.1.0
+  * Refresh patches
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 11 Mar 2020 06:36:04 +0100
+
+node-yargs (15.2.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.0
+  * New upstream version 15.2.0
+  * Require node-yargs-parser ≥ 17.1.0~
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 03 Mar 2020 17:59:43 +0100
+
+node-yargs (15.1.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 15.1.0
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 03 Jan 2020 11:43:26 +0100
+
+node-yargs (15.0.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 15.0.2
+  * Increase mocha timeout (fixes debci)
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 23 Nov 2019 12:59:06 +0100
+
+node-yargs (15.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 15.0.0
+  * Require node-yargs-parser ≥ 16.1.0~
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 13 Nov 2019 20:38:33 +0100
+
+node-yargs (14.2.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.4.1
+  * New upstream version 14.2.0
+  * Update node-yargs-parser dependency version to 15.0.0~
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 09 Oct 2019 06:50:35 +0200
+
+node-yargs (14.1.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable after successful tests
+  * Add "Rules-Requires-Root: no"
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 26 Sep 2019 22:19:10 +0200
+
+node-yargs (14.1.0-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream version 14.1.0
+  * Update description
+  * Update yargs-parser minimal version
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 10 Sep 2019 07:04:40 +0200
+
+node-yargs (14.0.0-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Allow backports to satisfy version requirement
+  * Set minimum version od nodejs to 6.11 (uses node command)
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.0
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * New upstream version 14.0.0
+  * Refresh patches
+  * Update VCS fields to salsa
+  * Update node-yargs-parser dependency version to 13.1.1~
+  * Install all .md files in docs
+  * Update debian/copyright format url
+  * Update homepage
+  * Switch install and test to pkg-js-tools
+  * Update description
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 28 Aug 2019 23:02:43 +0200
+
+node-yargs (10.0.3-2) unstable; urgency=medium
+
+  * Port tests to chai 4.x (patch by Aruna) (Closes: #884150)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 02 Jan 2018 12:19:56 +0530
+
+node-yargs (10.0.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 04 Dec 2017 20:18:44 +0530
+
+node-yargs (6.4.0-2) unstable; urgency=medium
+
+  * Update builddeps (Closes: #846467)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 01 Dec 2016 20:05:05 +0530
+
+node-yargs (6.4.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #844545)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 26 Nov 2016 16:38:03 +0530

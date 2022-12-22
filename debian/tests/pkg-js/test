@@ -1,0 +1,1 @@
+mocha --require ./test/before.js --timeout=30000 --check-leaks

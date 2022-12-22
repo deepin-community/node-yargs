@@ -1,0 +1,63 @@
+Source: node-yargs
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13)
+ , mocha <!nocheck>
+ , chai <!nocheck>
+ , node-es6-promise <!nocheck>
+ , node-chalk <!nocheck>
+ , node-hashish <!nocheck>
+ , node-cpr <!nocheck>
+ , node-require-directory <!nocheck>
+ , node-get-caller-file <!nocheck>
+ , node-set-blocking <!nocheck>
+ , node-require-main-filename <!nocheck>
+ , node-decamelize <!nocheck>
+ , node-string-width <!nocheck>
+ , node-cliui <!nocheck>
+ , node-which-module (>= 2.0~) <!nocheck>
+ , node-os-locale <!nocheck>
+ , node-y18n <!nocheck>
+ , node-yargs-parser (>= 18.1.0~) <!nocheck>
+ , node-find-up (>= 2.1~) <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-yargs
+Vcs-Git: https://salsa.debian.org/js-team/node-yargs.git
+Homepage: https://yargs.js.org/
+Rules-Requires-Root: no
+
+Package: node-yargs
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , node-require-directory
+ , node-get-caller-file
+ , node-set-blocking
+ , node-require-main-filename
+ , node-decamelize
+ , node-string-width
+ , node-cliui
+ , node-which-module (>= 2.0~)
+ , node-os-locale
+ , node-y18n
+ , node-yargs-parser (>= 18.1.0~)
+ , node-find-up (>= 2.1~)
+Provides: ${nodejs:Provides}
+Description: command line parser for nodejs
+ Yargs helps you build interactive command line tools by parsing arguments and
+ generating an elegant user interface.
+ .
+ Yargs gives you:
+  * commands and (grouped) options (like module run -n --force),
+  * a dynamically generated help menu based on your arguments,
+  * bash-completion shortcuts for commands and options.
+ .
+ With yargs, ye be havin' a map that leads straight to yer treasure! Treasure
+ of course, being a simple option hash.
+ .
+ Node.js is an event-based server-side JavaScript engine.
