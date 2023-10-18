@@ -1,0 +1,63 @@
+Description: tsc workaround
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-10-18
+
+--- a/lib/argsert.ts
++++ b/lib/argsert.ts
+@@ -73,6 +73,7 @@
+       position += 1;
+     });
+   } catch (err) {
++// @ts-ignore
+     console.warn(err.stack);
+   }
+ }
+--- a/lib/middleware.ts
++++ b/lib/middleware.ts
+@@ -61,11 +61,13 @@
+       if (isPromise(acc)) {
+         return acc
+           .then(initialObj =>
++// @ts-ignore
+             Promise.all<Arguments, Partial<Arguments>>([
+               initialObj,
+               middleware(initialObj, yargs),
+             ])
+           )
++// @ts-ignore
+           .then(([initialObj, middlewareObj]) =>
+             Object.assign(initialObj, middlewareObj)
+           );
+--- a/lib/typings/common-types.ts
++++ b/lib/typings/common-types.ts
+@@ -56,7 +56,9 @@
+ /**
+  * Typing wrappefr around Object.keys()
+  */
++// @ts-ignore
+ export function objectKeys<T>(object: T) {
++// @ts-ignore
+   return Object.keys(object) as (keyof T)[];
+ }
+ 
+--- a/lib/validation.ts
++++ b/lib/validation.ts
+@@ -290,6 +290,7 @@
+       try {
+         result = func(argv, aliases);
+       } catch (err) {
++// @ts-ignore
+         usage.fail(err.message ? err.message : err, err);
+         continue;
+       }
+--- a/lib/yargs-factory.ts
++++ b/lib/yargs-factory.ts
+@@ -752,6 +752,7 @@
+     self.global('_', false);
+ 
+     options.demandedCommands._ = {
++// @ts-ignore
+       min,
+       max,
+       minMsg,

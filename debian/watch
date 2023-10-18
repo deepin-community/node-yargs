@@ -2,9 +2,9 @@ version=4
 opts=\
 dversionmangle=auto,\
 filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-yargs-$1/ \
- https://github.com/yargs/yargs/tags .*/archive/.*/v?([\d\.]+).tar.gz
+ https://github.com/yargs/yargs/tags?after=v17.1.1-deno .*/archive/.*/v?([\d\.]+).tar.gz group
 
 # It is not recommended use npmregistry. Please investigate more.
 # Take a look at https://wiki.debian.org/debian/watch/
 opts="searchmode=plain,ctype=nodejs,component=types-yargs,pgpmode=none" \
- https://registry.npmjs.org/@types/yargs https://registry.npmjs.org/@types/yargs/-/yargs-([\d\.]+)@ARCHIVE_EXT@ ignore
+ https://registry.npmjs.org/@types/yargs https://registry.npmjs.org/@types/yargs/-/yargs-([\d\.]+)@ARCHIVE_EXT@ group

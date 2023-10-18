@@ -1,0 +1,13 @@
+Description: use rollup-plugin-typescript2
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-10-28
+
+--- a/rollup.config.cjs
++++ b/rollup.config.cjs
+@@ -1,4 +1,4 @@
+-const ts = require('@wessberg/rollup-plugin-ts');
++const ts = require('rollup-plugin-typescript2');
+ 
+ const output = {
+   format: 'cjs',

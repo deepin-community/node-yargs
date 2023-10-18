@@ -6,3 +6,12 @@
 
 %:
 	dh $@
+
+override_dh_auto_build:
+	dh_auto_build --buildsystem=nodejs
+	tsc
+	rollup -c rollup.config.cjs
+	rm -f build/index.cjs.d.ts
+
+override_dh_auto_test:
+	# No test during build to avoid circular dependency to node-mocha

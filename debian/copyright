@@ -17,7 +17,11 @@ Files: debian/*
 Copyright: 2016 Pirate Praveen <praveen@debian.org>
 License: Expat
 
-Files: lib/levenshtein.js
+Files: debian/build_modules/*
+Copyright: 2019-2022 Frederik Wessberg <frederikwessberg@hotmail.com>
+License: Expat
+
+Files: lib/utils/levenshtein.ts
 Copyright: 2011, Andrei Mackenzie
 License: Expat
 
