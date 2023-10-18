@@ -1,37 +1,41 @@
 Description: Disable failing window size tests
---- a/test/yargs.js
-+++ b/test/yargs.js
-@@ -578,6 +578,7 @@
-     })
-   })
- 
-+/*
-   describe('terminalWidth', () => {
-     it('returns the maximum width of the terminal', function () {
-       if (process.stdout.isTTY) {
-@@ -587,6 +588,7 @@
-       }
-     })
-   })
-+*/
- 
-   describe('number', () => {
-     it('accepts number arguments when a number type is specified', () => {
---- a/test/usage.js
-+++ b/test/usage.js
-@@ -1550,6 +1550,7 @@
-       })
-     })
+Forwarded: not-needed
+Reviewed-By: Yadd <yadd@debian.org>
+Last-Update: 2022-01-13
+
+--- a/test/usage.cjs
++++ b/test/usage.cjs
+@@ -1723,6 +1723,7 @@
+       });
+     });
  
 +/*
      it('should wrap based on window-size if no wrap is provided', function () {
        if (!process.stdout.isTTY) {
-         return this.skip()
-@@ -1571,6 +1572,7 @@
+         return this.skip();
+@@ -1745,6 +1746,7 @@
        // breaks when wrapped.
-       r.errors[0].split('\n').length.should.gte(4)
-     })
+       r.errors[0].split('\n').length.should.gte(4);
+     });
 +*/
  
-     it('should not raise an exception when long default and description are provided', () => yargs([])
-       .option('fairly-long-option', {
+     it('should not raise an exception when long default and description are provided', () =>
+       yargs([])
+--- a/test/yargs.cjs
++++ b/test/yargs.cjs
+@@ -554,6 +554,7 @@
+     });
+   });
+ 
++/*
+   describe('terminalWidth', () => {
+     it('returns the maximum width of the terminal', () => {
+       if (process.stdout.isTTY) {
+@@ -563,6 +564,7 @@
+       }
+     });
+   });
++*/
+ 
+   describe('number', () => {
+     it('accepts number arguments when a number type is specified', () => {

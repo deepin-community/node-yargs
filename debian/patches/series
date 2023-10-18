@@ -1,4 +1,7 @@
 disable-failing-window-size-tests.patch
 disable-yargs-test-extends.patch
-disable-new-mocha.patch
 remove-cross-spawn.patch
+tsc-workaround.patch
+drop-useless-rollup-plugin.patch
+use-rollup-plugin-typescript.patch
+drop-broken-test.patch

@@ -1,0 +1,34 @@
+Description: drop broken test
+ This command works, only test report is broken
+Author: Yadd <yadd@debian.org>
+Forwarded: no
+Last-Update: 2022-12-01
+
+--- a/test/integration.cjs
++++ b/test/integration.cjs
+@@ -69,25 +69,6 @@
+     });
+   });
+ 
+-  // see #497
+-  it('flushes all output when --help is executed', function (done) {
+-    if (process.platform === 'win32' && process.version.match(/^v0.10/)) {
+-      // Doesn’t work in CI for some reason.
+-      return this.skip();
+-    }
+-
+-    testCmd('./issue-497.js', ['--help'], (code, stdout) => {
+-      if (code) {
+-        done(new Error(`cmd exited with code ${code}`));
+-        return;
+-      }
+-
+-      stdout.should.match(/--o999/);
+-      stdout.should.not.match(/never get here/);
+-      return done();
+-    });
+-  });
+-
+   it('correctly fills positional command args with preceding option', done => {
+     testCmd(
+       './opt-assignment-and-positional-command-arg.js',

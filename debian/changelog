@@ -1,3 +1,63 @@
+node-yargs (16.2.0+~16.0.4-7) unstable; urgency=medium
+
+  * Team upload
+  * Remove unused license definitions for Unlicense.
+  * Fix autopkgtest
+
+ -- Yadd <yadd@debian.org>  Thu, 01 Dec 2022 15:49:08 +0100
+
+node-yargs (16.2.0+~16.0.4-6) unstable; urgency=medium
+
+  * Team upload
+  * Use rollup-plugin-typescript2 instead of embedded
+    @wessberg/rollup-plugin-ts (Closes: #1022700)
+
+ -- Yadd <yadd@debian.org>  Fri, 28 Oct 2022 16:50:57 +0200
+
+node-yargs (16.2.0+~16.0.4-5) unstable; urgency=medium
+
+  * Team upload
+  * Allow __proto__ call during autopkgtest:
+    test verifies that yargs doesn't pollute prototypes
+
+ -- Yadd <yadd@debian.org>  Tue, 18 Oct 2022 17:42:31 +0200
+
+node-yargs (16.2.0+~16.0.4-4) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.1, no changes needed.
+  * Update tsc patch for tsc >= 4.8
+
+ -- Yadd <yadd@debian.org>  Tue, 18 Oct 2022 17:03:35 +0200
+
+node-yargs (16.2.0+~16.0.4-3) unstable; urgency=medium
+
+  * Team upload
+  * Fix build dependencies (Closes: #1011833)
+
+ -- Yadd <yadd@debian.org>  Fri, 27 May 2022 07:19:25 +0200
+
+node-yargs (16.2.0+~16.0.4-2) unstable; urgency=medium
+
+  * Team upload
+  * Disable test during build to avoid circular dependency to mocha
+  * Back to unstable
+
+ -- Yadd <yadd@debian.org>  Fri, 14 Jan 2022 11:20:27 +0100
+
+node-yargs (16.2.0+~16.0.4-1) experimental; urgency=medium
+
+  * Team upload
+  * Dependencies: drop unneeded versioned constraints
+  * Drop disable-new-mocha.patch
+  * Use uscan group
+  * New upstream version 16.2.0+~16.0.4
+  * Build with tsc and rollup
+  * Update dependencies
+  * Skip require test (pkg-js-autopkgtest bug)
+
+ -- Yadd <yadd@debian.org>  Thu, 13 Jan 2022 14:49:49 +0100
+
 node-yargs (15.3.1+repack-3) unstable; urgency=medium
 
   * Team upload

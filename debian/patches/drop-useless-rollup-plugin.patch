@@ -1,0 +1,23 @@
+Description: useless and unpackaged
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-01-13
+
+--- a/rollup.config.cjs
++++ b/rollup.config.cjs
+@@ -1,4 +1,3 @@
+-const cleanup = require('rollup-plugin-cleanup');
+ const ts = require('@wessberg/rollup-plugin-ts');
+ 
+ const output = {
+@@ -9,10 +8,6 @@
+ 
+ const plugins = [
+   ts(),
+-  cleanup({
+-    comments: 'none',
+-    extensions: ['*'],
+-  }),
+ ];
+ if (process.env.NODE_ENV === 'test') output.sourcemap = true;
+ 

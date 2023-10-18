@@ -1,1 +1,1 @@
-mocha --require ./test/before.js --timeout=30000 --check-leaks
+mocha --require ./test/before.cjs --timeout=30000 --check-leaks
